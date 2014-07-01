@@ -5,7 +5,7 @@ var initDjangoHStoreWidget = function(hstore_field_name, inline_prefix) {
         return;
     }
 
-    $ = django.jQuery;
+    $ = yawdadmin.jQuery;
     
     // processing inlines
     if(hstore_field_name.indexOf('inline') > -1){
@@ -40,7 +40,7 @@ var initDjangoHStoreWidget = function(hstore_field_name, inline_prefix) {
         var hstore_field_id = 'id_'+hstore_field_name,
             original_textarea = $('#'+hstore_field_id),
             original_value = original_textarea.val(),
-            original_container = original_textarea.parents('.form-row, .grp-row').eq(0),
+            original_container = original_textarea.parents('.row-fluid, .grp-row').eq(0),
             errorHtml = original_container.find('.errorlist').html(),
             json_data = {};
 
@@ -168,7 +168,7 @@ var initDjangoHStoreWidget = function(hstore_field_name, inline_prefix) {
     });
 };
 
-django.jQuery(window).load(function() {
+yawdadmin.jQuery(window).load(function() {
     // support inlines
     // bind only once
     if(window.hstoreWidgetBoundInlines === undefined){

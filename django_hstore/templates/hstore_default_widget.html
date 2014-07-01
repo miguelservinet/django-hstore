@@ -18,7 +18,7 @@
 
 <script type="text/html" id="hstore-ui-template-{{ field_name }}"{% if '__prefix__' in field_name %} class="hstore-ui-template-inline"{% endif %}>
     <div class="hstore" id="hstore-{{ field_name }}">
-        <h2><%= label %></h2>
+        <!--<h2><%= label %></h2>-->
 
         <% if(help && help != '') { %>
             <div class="form-row">
@@ -62,4 +62,4 @@
     </div>
 </script>
 
-<script>django.jQuery(function() { initDjangoHStoreWidget('{{ field_name }}') });</script>
+<script>yawdadmin.jQuery(function() { initDjangoHStoreWidget('{{ field_name }}') });</script>
